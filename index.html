@@ -1,16 +1,14 @@
-<!DOCTYPE html>
+https://github.com/mauriciosozarivera-co/tablero-terminos/edit/main/index.html<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
 <title>Tablero de Términos</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f4f0;color:#1a1a18;font-size:15px}
 .topbar{background:#fff;border-bottom:1px solid #e0dfd7;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:100}
-.topbar-title{font-size:14px;font-weight:500}
-.topbar-sub{font-size:11px;color:#888;margin-left:6px}
+.topbar-title{font-size:14px;font-weight:500}.topbar-sub{font-size:11px;color:#888;margin-left:6px}
 .today-badge{font-size:11px;background:#f0efe8;border-radius:20px;padding:3px 10px;color:#555;white-space:nowrap}
 .page{display:flex;flex-direction:column;min-height:calc(100vh - 52px)}
 .form-section{background:#fff;border-bottom:1px solid #e0dfd7;padding:1rem}
@@ -21,7 +19,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .form-group{margin-bottom:.7rem}
 label{font-size:12px;color:#555;display:block;margin-bottom:3px}
 input,select,textarea{width:100%;padding:7px 10px;border:1px solid #ddd;border-radius:7px;font-size:13px;font-family:inherit;background:#fff;color:#1a1a18;outline:none}
-input:focus,select:focus,textarea:focus{border-color:#888}
 textarea{resize:vertical;min-height:48px}
 .btn-primary{width:100%;padding:9px;border-radius:7px;font-size:13px;cursor:pointer;font-family:inherit;font-weight:500;border:none;background:#1a1a18;color:#fff;margin-top:4px}
 .btn-primary:disabled{opacity:.5;cursor:not-allowed}
@@ -32,32 +29,25 @@ textarea{resize:vertical;min-height:48px}
 .main{flex:1;padding:1rem}
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:1rem}
 .metric{background:#fff;border:1px solid #e8e7e0;border-radius:10px;padding:.6rem;text-align:center}
-.metric-n{font-size:22px;font-weight:500}
-.metric-l{font-size:11px;color:#888}
+.metric-n{font-size:22px;font-weight:500}.metric-l{font-size:11px;color:#888}
 .alert-banner{background:#fffbf0;border:1px solid #f7d080;border-radius:8px;padding:.7rem 1rem;margin-bottom:1rem;display:flex;gap:8px;align-items:flex-start;font-size:13px}
 .tabs{display:flex;border-bottom:1px solid #e0dfd7;margin-bottom:1rem;overflow-x:auto}
 .tab{padding:8px 14px;font-size:13px;cursor:pointer;border:none;background:none;color:#888;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;font-weight:500;white-space:nowrap}
 .tab.active{color:#1a1a18;border-bottom-color:#1a1a18}
 .panel{display:none}.panel.active{display:block}
 .term-card{background:#fff;border:1px solid #e8e7e0;border-radius:10px;padding:.9rem 1rem;margin-bottom:10px}
-.term-card.overdue{border-left:3px solid #e24b4a}
-.term-card.today-st{border-left:3px solid #ba7517}
-.term-card.soon{border-left:3px solid #185fa5}
-.term-card.ok{border-left:3px solid #3b6d11}
+.term-card.overdue{border-left:3px solid #e24b4a}.term-card.today-st{border-left:3px solid #ba7517}
+.term-card.soon{border-left:3px solid #185fa5}.term-card.ok{border-left:3px solid #3b6d11}
 .term-card.done-card{opacity:.55;border-left:3px solid #ccc}
 .term-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px}
 .term-title{font-size:14px;font-weight:500}
 .term-meta{font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
 .badge{display:inline-flex;align-items:center;padding:3px 8px;border-radius:6px;font-size:12px;font-weight:500}
-.badge-danger{background:#fdf0f0;color:#a32d2d}
-.badge-warning{background:#fffbf0;color:#854f0b}
-.badge-info{background:#e6f1fb;color:#185fa5}
-.badge-success{background:#eaf3de;color:#3b6d11}
+.badge-danger{background:#fdf0f0;color:#a32d2d}.badge-warning{background:#fffbf0;color:#854f0b}
+.badge-info{background:#e6f1fb;color:#185fa5}.badge-success{background:#eaf3de;color:#3b6d11}
 .type-pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500}
-.type-entrante{background:#e6f1fb;color:#185fa5}
-.type-saliente{background:#eaf3de;color:#3b6d11}
-.type-judicial{background:#eeedfe;color:#534ab7}
-.type-otro{background:#f0efe8;color:#5f5e5a}
+.type-entrante{background:#e6f1fb;color:#185fa5}.type-saliente{background:#eaf3de;color:#3b6d11}
+.type-judicial{background:#eeedfe;color:#534ab7}.type-otro{background:#f0efe8;color:#5f5e5a}
 .progress-bar{height:4px;background:#f0efe8;border-radius:2px;margin-top:6px}
 .progress-fill{height:4px;border-radius:2px}
 .term-actions{display:flex;gap:6px;flex-shrink:0}
@@ -69,15 +59,11 @@ textarea{resize:vertical;min-height:48px}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
 .cal-dh{text-align:center;font-size:10px;font-weight:600;color:#aaa;padding:3px;text-transform:uppercase}
 .cal-cell{min-height:56px;background:#fff;border:1px solid #e8e7e0;border-radius:6px;padding:3px}
-.cal-cell.today-cell{border:2px solid #1a1a18}
-.cal-cell.empty-cell{background:none;border-color:transparent}
-.cal-num{font-size:11px;color:#aaa;margin-bottom:1px}
-.today-cell .cal-num{color:#1a1a18;font-weight:700}
+.cal-cell.today-cell{border:2px solid #1a1a18}.cal-cell.empty-cell{background:none;border-color:transparent}
+.cal-num{font-size:11px;color:#aaa;margin-bottom:1px}.today-cell .cal-num{color:#1a1a18;font-weight:700}
 .cal-dot{font-size:9px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:3px;padding:1px 2px;margin-bottom:1px}
-.dot-red{background:#fdf0f0;color:#a32d2d}
-.dot-amber{background:#fffbf0;color:#854f0b}
-.dot-blue{background:#e6f1fb;color:#185fa5}
-.dot-green{background:#eaf3de;color:#3b6d11}
+.dot-red{background:#fdf0f0;color:#a32d2d}.dot-amber{background:#fffbf0;color:#854f0b}
+.dot-blue{background:#e6f1fb;color:#185fa5}.dot-green{background:#eaf3de;color:#3b6d11}
 .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:.75rem;font-size:11px;color:#888}
 .legend span{display:flex;align-items:center;gap:4px}
 .legend-dot{width:9px;height:9px;border-radius:2px;display:inline-block}
@@ -85,113 +71,79 @@ textarea{resize:vertical;min-height:48px}
 </head>
 <body>
 <div class="topbar">
-  <div class="topbar-title">📅 Tablero de Términos <span class="topbar-sub">Fiscalía Santander</span></div>
+  <div class="topbar-title">&#128197; Tablero de Terminos <span class="topbar-sub">Fiscalia Santander</span></div>
   <span class="today-badge" id="today-label"></span>
 </div>
 <div class="page">
   <div class="form-section">
     <div class="form-toggle" onclick="toggleForm()">
-      <span>+ Registrar término</span>
-      <span id="form-arrow">▼ Expandir</span>
+      <span>+ Registrar termino</span>
+      <span id="form-arrow">Expandir</span>
     </div>
     <div class="form-body" id="form-body" style="display:none">
-      <div class="form-group"><label for="f-name">Actividad / asunto *</label><input type="text" id="f-name" placeholder="Ej. Respuesta oficio 2025-0234"></div>
+      <div class="form-group"><label>Actividad / asunto *</label><input type="text" id="f-name" placeholder="Ej. Respuesta oficio 2025-0234"></div>
       <div class="form-row">
-        <div class="form-group"><label for="f-type">Tipo</label>
-          <select id="f-type">
-            <option value="Solicitud entrante">Solicitud entrante</option>
-            <option value="Requerimiento enviado">Requerimiento enviado</option>
-            <option value="Término judicial">Término judicial</option>
-            <option value="Otro">Otro</option>
-          </select>
-        </div>
-        <div class="form-group"><label for="f-alert">Alertar antes</label>
-          <select id="f-alert">
-            <option value="1">1 día</option>
-            <option value="2">2 días</option>
-            <option value="3" selected>3 días</option>
-            <option value="5">5 días</option>
-            <option value="10">10 días</option>
-          </select>
-        </div>
+        <div class="form-group"><label>Tipo</label><select id="f-type"><option value="Solicitud entrante">Solicitud entrante</option><option value="Requerimiento enviado">Requerimiento enviado</option><option value="Termino judicial">Termino judicial</option><option value="Otro">Otro</option></select></div>
+        <div class="form-group"><label>Alertar antes</label><select id="f-alert"><option value="1">1 dia</option><option value="2">2 dias</option><option value="3" selected>3 dias</option><option value="5">5 dias</option><option value="10">10 dias</option></select></div>
       </div>
       <div class="form-row">
-        <div class="form-group"><label for="f-start">Fecha inicio *</label><input type="date" id="f-start"></div>
-        <div class="form-group"><label for="f-days">Días hábiles *</label><input type="number" id="f-days" min="1" max="365" placeholder="10"></div>
+        <div class="form-group"><label>Fecha inicio *</label><input type="date" id="f-start"></div>
+        <div class="form-group"><label>Dias habiles *</label><input type="number" id="f-days" min="1" max="365" placeholder="10"></div>
       </div>
-      <div class="form-group"><label for="f-notes">Observaciones</label><textarea id="f-notes" placeholder="Radicado, norma base…">.tabs{display:flex;border-bottom:1px solid #e0dfd7;margin-bottom:1.25rem}
-.tab{padding:8px 16px;font-size:13px;cursor:pointer;border:none;background:none;color:#888;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;font-weight:500}
-.tab.active{color:#1a1a18;border-bottom-color:#1a1a18}
-.panel{display:none}.panel.active{display:block}
-.term-card{background:#fff;border:1px solid #e8e7e0;border-radius:10px;padding:1rem 1.25rem;margin-bottom:10px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
-.term-card.overdue{border-left:3px solid #e24b4a}
-.term-card.today-st{border-left:3px solid #ba7517}
-.term-card.soon{border-left:3px solid #185fa5}
-.term-card.ok{border-left:3px solid #3b6d11}
-.term-card.done-card{opacity:.55;border-left:3px solid #ccc}
-.term-title{font-size:14px;font-weight:500;margin-bottom:4px}
-.term-meta{font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
-.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:6px;font-size:12px;font-weight:500}
-.badge-danger{background:#fdf0f0;color:#a32d2d}
-.badge-warning{background:#fffbf0;color:#854f0b}
-.badge-info{background:#e6f1fb;color:#185fa5}
-.badge-success{background:#eaf3de;color:#3b6d11}
-.type-pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500}
-.type-entrante{background:#e6f1fb;color:#185fa5}
-.type-saliente{background:#eaf3de;color:#3b6d11}
-.type-judicial{background:#eeedfe;color:#534ab7}
-.type-otro{background:#f0efe8;color:#5f5e5a}
-.progress-bar{height:4px;background:#f0efe8;border-radius:2px;margin-top:8px}
-.progress-fill{height:4px;border-radius:2px}
-.term-actions{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
-.empty{text-align:center;padding:3rem 1rem;color:#aaa}
-.loading{text-align:center;padding:2rem;color:#aaa;font-size:13px}
-.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
-.cal-title{font-size:15px;font-weight:500}
-.cal-nav{background:#fff;border:1px solid #e0dfd7;border-radius:6px;padding:4px 12px;cursor:pointer;font-size:16px}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.cal-dh{text-align:center;font-size:10px;font-weight:600;color:#aaa;padding:4px;text-transform:uppercase}
-.cal-cell{min-height:68px;background:#fff;border:1px solid #e8e7e0;border-radius:7px;padding:4px}
-.cal-cell.today-cell{border:2px solid #1a1a18}
-.cal-cell.empty-cell{background:none;border-color:transparent}
-.cal-num{font-size:11px;color:#aaa;margin-bottom:2px}
-.today-cell .cal-num{color:#1a1a18;font-weight:700}
-.cal-dot{font-size:10px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:3px;padding:1px 3px;margin-bottom:1px}
-.dot-red{background:#fdf0f0;color:#a32d2d}
-.dot-amber{background:#fffbf0;color:#854f0b}
-.dot-blue{background:#e6f1fb;color:#185fa5}
-.dot-green{background:#eaf3de;color:#3b6d11}
-.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:1rem;font-size:12px;color:#888}
-.legend span{display:flex;align-items:center;gap:4px}
-.legend-dot{width:10px;height:10px;border-radius:2px;display:inline-block}
-</style>
-</head>
-<body>
-<div class="topbar">
-  <div class="topbar-title">📅 Tablero de Términos <span class="topbar-sub">Fiscalía Santander</span></div>
-  <span class="today-badge" id="today-label"></span>
+      <div class="form-group"><label>Observaciones</label><textarea id="f-notes" placeholder="Radicado, norma base..."></textarea></div>
+      <button class="btn-primary" id="save-btn" onclick="addTerm()">+ Guardar termino</button>
+      <div class="form-msg" id="form-msg"></div>
+    </div>
+  </div>
+  <div class="main">
+    <div id="alert-banner"></div>
+    <div class="metrics" id="metrics-row"></div>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('lista')">Activos</button>
+      <button class="tab" onclick="switchTab('calendario')">Calendario</button>
+      <button class="tab" onclick="switchTab('cumplidos')">Cumplidos</button>
+    </div>
+    <div id="panel-lista" class="panel active"><div id="terms-list"><div class="loading">Cargando...</div></div></div>
+    <div id="panel-calendario" class="panel">
+      <div class="cal-header"><button class="cal-nav" onclick="changeMonth(-1)">&#8249;</button><span class="cal-title" id="cal-month-title"></span><button class="cal-nav" onclick="changeMonth(1)">&#8250;</button></div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div class="legend"><span><span class="legend-dot" style="background:#fdf0f0;border:1px solid #f09595"></span>Vencido</span><span><span class="legend-dot" style="background:#fffbf0;border:1px solid #ef9f27"></span>Hoy</span><span><span class="legend-dot" style="background:#e6f1fb;border:1px solid #85b7eb"></span>Proximo</span><span><span class="legend-dot" style="background:#eaf3de;border:1px solid #97c459"></span>Vigente</span></div>
+    </div>
+    <div id="panel-cumplidos" class="panel"><div id="done-list"></div></div>
+  </div>
 </div>
-<div class="layout">
-<aside class="sidebar">
-  <div class="section-label">Registrar término</div>
-  <div class="form-group"><label for="f-name">Actividad / asunto *</label><input type="text" id="f-name" placeholder="Ej. Respuesta oficio 2025-0234"></div>
-  <div class="form-group"><label for="f-type">Tipo</label>
-    <select id="f-type">
-      <option value="Solicitud entrante">Solicitud entrante</option>
-      <option value="Requerimiento enviado">Requerimiento enviado</option>
-      <option value="Término judicial">Término judicial</option>
-      <option value="Otro">Otro</option>
-    </select>
-  </div>
-  <div class="form-group"><label for="f-start">Fecha de inicio *</label><input type="date" id="f-start"></div>
-  <div class="form-group"><label for="f-days">Días hábiles *</label><input type="number" id="f-days" min="1" max="365" placeholder="Ej. 10"></div>
-  <div class="form-group"><label for="f-alert">Alertar con anticipación</label>
-    <select id="f-alert">
-      <option value="1">1 día antes</option>
-      <option value="2">2 días antes</option>
-      <option value="3" selected>3 días antes</option>
-      <option value="5">5 días antes</option>
-      <option value="10">10 días antes</option>
-    </select>
-  </div>
-  <div class="form-group"><label for="f-notes">Observaciones</label><textarea id="f-notes" placeholder="Radicado, norma base…">
+<script>
+var terms=[],allTerms=[],calYear,calMonth,formOpen=false;
+var TODAY=new Date();TODAY.setHours(0,0,0,0);
+var MONTHS=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+var DAYS=['Lun','Mar','Mi','Jue','Vie','Sab','Dom'];
+function toDate(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function fmt(s){if(!s)return'-';var p=s.split('-');return p[2]+'/'+p[1]+'/'+p[0];}
+function addBiz(start,n){var d=new Date(start);d.setHours(0,0,0,0);var a=0;while(a<n){d.setDate(d.getDate()+1);if(d.getDay()&&d.getDay()!==6)a++;}return d;}
+function dl(deadline){return Math.round((toDate(deadline)-TODAY)/864e5);}
+function getst(t){var d=dl(t.deadline);return d<0?'overdue':d===0?'today':d<=+t.alert?'soon':'ok';}
+function badge(t){var d=dl(t.deadline);if(d<0)return'<span class="badge badge-danger">Vencido hace '+(-d)+' dia'+(-d>1?'s':'')+'</span>';if(d===0)return'<span class="badge badge-warning">Vence hoy</span>';if(d<=+t.alert)return'<span class="badge badge-info">'+d+' dia'+(d>1?'s':'')+' restante'+(d>1?'s':'')+'</span>';return'<span class="badge badge-success">'+d+' dias restantes</span>';}
+function tl(v){return{'Solicitud entrante':'Solicitud entrante','Requerimiento enviado':'Requerimiento enviado','Termino judicial':'Termino judicial','Otro':'Otro',entrante:'Solicitud entrante',saliente:'Requerimiento enviado',judicial:'Termino judicial',otro:'Otro'}[v]||v;}
+function tc(v){if(v==='Solicitud entrante'||v==='entrante')return'entrante';if(v==='Requerimiento enviado'||v==='saliente')return'saliente';if(v==='Termino judicial'||v==='judicial')return'judicial';return'otro';}
+function toggleForm(){formOpen=!formOpen;document.getElementById('form-body').style.display=formOpen?'block':'none';document.getElementById('form-arrow').textContent=formOpen?'Contraer':'Expandir';}
+async function load(){try{var r=await fetch('/api/terms');terms=await r.json();render();}catch(e){document.getElementById('terms-list').innerHTML='<div class="empty"><p>Error al cargar. Verifica NOTION_TOKEN en Netlify.</p></div>';}}
+async function loadAll(){try{var r=await fetch('/api/terms?all=1');allTerms=await r.json();renderDone();}catch(e){}}
+async function addTerm(){var name=document.getElementById('f-name').value.trim(),start=document.getElementById('f-start').value,days=parseInt(document.getElementById('f-days').value),msg=document.getElementById('form-msg');if(!name||!start||!days){msg.textContent='Completa los campos.';return;}msg.textContent='';var btn=document.getElementById('save-btn');btn.disabled=true;btn.textContent='Guardando...';var deadline=iso(addBiz(toDate(start),days));try{await fetch('/api/terms',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,type:document.getElementById('f-type').value,start:start,days:days,deadline:deadline,alert:+document.getElementById('f-alert').value,notes:document.getElementById('f-notes').value.trim(),done:false})});['f-name','f-days','f-notes'].forEach(function(id){document.getElementById(id).value='';});await load();toggleForm();switchTab('lista');}catch(e){msg.textContent='Error.';}btn.disabled=false;btn.textContent='+ Guardar termino';}
+async function toggleDone(id,done){await fetch('/api/terms',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({_action:'update',id:id,done:!done})});await load();await loadAll();}
+async function deleteTerm(id){if(!confirm('Eliminar?'))return;await fetch('/api/terms',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({_action:'delete',id:id})});await load();}
+function render(){renderDay();renderMetrics();renderList();renderCalendar();renderAlerts();}
+function renderDay(){try{document.getElementById('today-label').textContent=TODAY.toLocaleDateString('es-CO',{weekday:'short',day:'numeric',month:'short'});}catch(e){}}
+function renderMetrics(){document.getElementById('metrics-row').innerHTML='<div class="metric"><div class="metric-n" style="color:#e24b4a">'+terms.filter(function(t){return getst(t)==='overdue';}).length+'</div><div class="metric-l">Vencidos</div></div><div class="metric"><div class="metric-n" style="color:#ba7517">'+terms.filter(function(t){return getst(t)==='today';}).length+'</div><div class="metric-l">Hoy</div></div><div class="metric"><div class="metric-n" style="color:#185fa5">'+terms.filter(function(t){return getst(t)==='soon';}).length+'</div><div class="metric-l">Proximos</div></div><div class="metric"><div class="metric-n" style="color:#3b6d11">'+terms.filter(function(t){return getst(t)==='ok';}).length+'</div><div class="metric-l">Vigentes</div></div>';}
+function renderAlerts(){var e=document.getElementById('alert-banner'),u=terms.filter(function(t){return getst(t)==='overdue'||getst(t)==='today'||getst(t)==='soon';});e.innerHTML=u.length?'<div class="alert-banner"><span>!</span><div><strong>'+u.length+' terminos requieren atencion</strong><br><span style="color:#666;font-size:12px">'+u.map(function(t){return t.name;}).join(', ')+'</span></div></div>':'';}
+function renderList(){var e=document.getElementById('terms-list');if(!terms.length){e.innerHTML='<div class="empty"><p>Sin terminos activos.</p></div>';return;}e.innerHTML=terms.map(function(t){var s=getst(t),d=Math.max(0,dl(t.deadline)),p=Math.max(0,Math.min(100,100-(d/Math.max(t.days,1))*100)),c=s==='overdue'?'#e24b4a':s==='today'?'#ba7517':s==='soon'?'#185fa5':'#3b6d11',sc=s==='today'?'today-st':s;return'<div class="term-card '+sc+'"><div class="term-header"><div><div class="term-title">'+t.name+'</div><div class="term-meta"><span class="type-pill type-'+tc(t.type)+'">'+tl(t.type)+'</span><span>Vence: '+fmt(t.deadline)+(t.days?' ('+t.days+'d)':'')+'</span></div></div><div class="term-actions"><button class="btn-sm btn-success-sm" onclick="toggleDone(''+t.id+'','+t.done+')">Ok</button><button class="btn-sm btn-danger-sm" onclick="deleteTerm(''+t.id+'')">X</button></div></div>'+(t.notes?'<div style="font-size:12px;color:#888;margin-bottom:6px">'+t.notes+'</div>':'')+badge(t)+'<div class="progress-bar"><div class="progress-fill" style="width:'+p+'%;background:'+c+'"></div></div></div>';}).join('');}
+function renderDone(){var e=document.getElementById('done-list'),done=allTerms.filter(function(t){return t.done;});if(!done.length){e.innerHTML='<div class="empty"><p>Sin terminos cumplidos.</p></div>';return;}e.innerHTML=done.map(function(t){return'<div class="term-card done-card"><div class="term-header"><div><div class="term-title" style="text-decoration:line-through">'+t.name+'</div><div class="term-meta"><span class="type-pill type-'+tc(t.type)+'">'+tl(t.type)+'</span><span>'+fmt(t.deadline)+'</span></div></div><div class="term-actions"><button class="btn-sm" onclick="toggleDone(''+t.id+'','+t.done+')">Reactivar</button><button class="btn-sm btn-danger-sm" onclick="deleteTerm(''+t.id+'')">X</button></div></div></div>';}).join('');}
+function renderCalendar(){document.getElementById('cal-month-title').textContent=MONTHS[calMonth]+' '+calYear;var g=document.getElementById('cal-grid'),h=DAYS.map(function(d){return'<div class="cal-dh">'+d+'</div>';}).join(''),f=new Date(calYear,calMonth,1),sd=(f.getDay()+6)%7;for(var i=0;i<sd;i++)h+='<div class="cal-cell empty-cell"></div>';var dm=new Date(calYear,calMonth+1,0).getDate();for(var d=1;d<=dm;d++){var td=new Date(calYear,calMonth,d),ds=iso(td),it=td.getTime()===TODAY.getTime(),m=terms.filter(function(t){return t.deadline===ds;}),dots=m.map(function(t){var s=getst(t),c=s==='overdue'?'dot-red':s==='today'?'dot-amber':s==='soon'?'dot-blue':'dot-green';return'<div class="cal-dot '+c+'">'+t.name.substring(0,12)+'</div>';}).join('');h+='<div class="cal-cell'+(it?' today-cell':'')+'"><div class="cal-num">'+d+'</div>'+dots+'</div>';}g.innerHTML=h;}
+function changeMonth(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++;}if(calMonth<0){calMonth=11;calYear--;}renderCalendar();}
+function switchTab(n){['lista','calendario','cumplidos'].forEach(function(name,i){document.querySelectorAll('.tab')[i].classList.toggle('active',name===n);});document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});document.getElementById('panel-'+n).classList.add('active');if(n==='cumplidos'&&!allTerms.length)loadAll();}
+calYear=TODAY.getFullYear();calMonth=TODAY.getMonth();
+document.getElementById('f-start').value=iso(TODAY);
+renderDay();renderMetrics();renderCalendar();load();
+</script>
+</body>
+</html>
